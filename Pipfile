@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+ruff = "*"
+pytest = "*"
+httpx = "*"
+python-dotenv = "*"
+pydantic-settings = "*"
+databases = {extras = ["aiosqlite"], version = "*"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
