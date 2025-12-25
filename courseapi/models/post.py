@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
 class UserPostIn(BaseModel):
@@ -6,6 +6,8 @@ class UserPostIn(BaseModel):
 
 
 class UserPost(UserPostIn):
+    model_config = ConfigDict(from_attributes=True) #ORM mode
+    
     id: int
 
 
@@ -15,8 +17,9 @@ class CommentIn(BaseModel):
 
 
 class Comment(CommentIn):
-    id: int
+    model_config = ConfigDict(from_attributes=True) #ORM mode
 
+    id: int
 
 class UserPostWithComments(BaseModel):
     post: UserPost
