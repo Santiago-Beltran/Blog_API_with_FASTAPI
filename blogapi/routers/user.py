@@ -1,7 +1,7 @@
 import logging
 from fastapi import APIRouter, HTTPException, status
 from courseapi.models.user import UserIn
-from courseapi.security import get_user
+from courseapi.security import get_user, get_password_hash
 from courseapi.database import database, user_table
 
 logger = logging.getLogger(__name__)
@@ -16,8 +16,10 @@ async def register(user: UserIn):
             detail="A user with that email already exists"
         )
     
-    # STORING PASSWORD IN PLAIN TEXT FOR TESTING PURPOSES ONLY, THIS MUST BE CHANGED!
-    query = user_table.insert().values(email=user.email, password=user.password)
+    logger.error(user.password)
+
+    hashed_password = get_password_hash(user.password)      
+    query = user_table.insert().values(email=user.email, password=hashed_password)
 
     logger.debug(query)
     
