@@ -1,0 +1,56 @@
+2025-12-25T14:42:47 773Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-12-25T14:42:47 775Z | INFO     | uvicorn.error:216 - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-12-25T14:43:09 228Z | INFO     | uvicorn.error:264 - Shutting down
+2025-12-25T14:43:09 330Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-12-25T14:43:09 331Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-12-25T14:43:09 332Z | INFO     | uvicorn.error:94 - Finished server process [11028]
+2025-12-25T15:05:29 371Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-12-25T15:05:29 373Z | INFO     | uvicorn.error:216 - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-12-25T15:05:33 786Z | INFO     | uvicorn.error:264 - Shutting down
+2025-12-25T15:05:33 887Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-12-25T15:05:33 889Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-12-25T15:05:33 889Z | INFO     | uvicorn.error:94 - Finished server process [12386]
+2025-12-25T15:05:36 264Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-12-25T15:05:36 266Z | INFO     | uvicorn.error:216 - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-12-25T15:06:06 121Z | INFO     | courseapi.routers.post:85 - Getting post {post_id} and its comments
+2025-12-25T15:06:06 122Z | INFO     | courseapi.routers.post:19 - Finding post with id 2
+2025-12-25T15:06:06 124Z | ERROR    | courseapi.main:28 - HTTPException: {exc.status_code} {exc.detail}
+2025-12-25T15:06:06 125Z | INFO     | uvicorn.access:480 - 127.0.0.1:35726 - "GET /post/2 HTTP/1.1" 404
+2025-12-25T15:07:12 420Z | INFO     | uvicorn.error:264 - Shutting down
+2025-12-25T15:07:12 521Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-12-25T15:07:12 523Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-12-25T15:07:12 523Z | INFO     | uvicorn.error:94 - Finished server process [12436]
+2025-12-25T15:07:14 760Z | INFO     | uvicorn.error:62 - Application startup complete.
+2025-12-25T15:07:14 763Z | INFO     | uvicorn.error:216 - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-12-25T15:07:18 935Z | INFO     | courseapi.routers.post:85 - Getting post 2 and its comments
+2025-12-25T15:07:18 936Z | INFO     | courseapi.routers.post:19 - Finding post with id 2
+2025-12-25T15:07:18 938Z | ERROR    | courseapi.main:28 - HTTPException: 404 Post not found.
+2025-12-25T15:07:18 939Z | INFO     | uvicorn.access:480 - 127.0.0.1:33244 - "GET /post/2 HTTP/1.1" 404
+2025-12-25T15:08:32 467Z | INFO     | uvicorn.error:264 - Shutting down
+2025-12-25T15:08:32 568Z | INFO     | uvicorn.error:67 - Waiting for application shutdown.
+2025-12-25T15:08:32 569Z | INFO     | uvicorn.error:76 - Application shutdown complete.
+2025-12-25T15:08:32 570Z | INFO     | uvicorn.error:94 - Finished server process [12880]
+2025-12-25T16:03:54 825Z | INFO     | [-] uvicorn.error:62 - Application startup complete.
+2025-12-25T16:03:54 827Z | INFO     | [-] uvicorn.error:216 - Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-12-25T16:04:13 156Z | INFO     | [e75d4ec0f66d4927b5b7ca15917ea00b] courseapi.routers.post:85 - Getting post 2 and its comments
+2025-12-25T16:04:13 158Z | INFO     | [e75d4ec0f66d4927b5b7ca15917ea00b] courseapi.routers.post:19 - Finding post with id 2
+2025-12-25T16:04:13 160Z | ERROR    | [e75d4ec0f66d4927b5b7ca15917ea00b] courseapi.main:30 - HTTPException: 404 Post not found.
+2025-12-25T16:04:13 161Z | INFO     | [e75d4ec0f66d4927b5b7ca15917ea00b] uvicorn.access:480 - 127.0.0.1:51544 - "GET /post/2 HTTP/1.1" 404
+2025-12-25T16:04:32 038Z | INFO     | [852719dfc99249f0978d8b3facfee880] courseapi.routers.post:85 - Getting post 2 and its comments
+2025-12-25T16:04:32 039Z | INFO     | [852719dfc99249f0978d8b3facfee880] courseapi.routers.post:19 - Finding post with id 2
+2025-12-25T16:04:32 041Z | ERROR    | [852719dfc99249f0978d8b3facfee880] courseapi.main:30 - HTTPException: 404 Post not found.
+2025-12-25T16:04:32 042Z | INFO     | [852719dfc99249f0978d8b3facfee880] uvicorn.access:480 - 127.0.0.1:51682 - "GET /post/2 HTTP/1.1" 404
+2025-12-25T16:04:32 288Z | INFO     | [c91e8085ac6c483184944b88e5111dc2] courseapi.routers.post:85 - Getting post 2 and its comments
+2025-12-25T16:04:32 288Z | INFO     | [c91e8085ac6c483184944b88e5111dc2] courseapi.routers.post:19 - Finding post with id 2
+2025-12-25T16:04:32 290Z | ERROR    | [c91e8085ac6c483184944b88e5111dc2] courseapi.main:30 - HTTPException: 404 Post not found.
+2025-12-25T16:04:32 291Z | INFO     | [c91e8085ac6c483184944b88e5111dc2] uvicorn.access:480 - 127.0.0.1:51682 - "GET /post/2 HTTP/1.1" 404
+2025-12-25T16:08:36 844Z | INFO     | [-] uvicorn.error:264 - Shutting down
+2025-12-25T16:08:36 946Z | INFO     | [-] uvicorn.error:67 - Waiting for application shutdown.
+2025-12-25T16:08:36 947Z | INFO     | [-] uvicorn.error:76 - Application shutdown complete.
+2025-12-25T16:08:36 948Z | INFO     | [-] uvicorn.error:94 - Finished server process [16125]
+{"asctime": "2025-12-25T16:08:40", "msecs": 528.0, "levelname": "INFO", "correlation_id": "-", "name": "uvicorn.error", "lineno": 62, "message": "Application startup complete."}
+{"asctime": "2025-12-25T16:08:40", "msecs": 531.0, "levelname": "INFO", "correlation_id": "-", "name": "uvicorn.error", "lineno": 216, "message": "Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)", "color_message": "Uvicorn running on \u001b[1m%s://%s:%d\u001b[0m (Press CTRL+C to quit)"}
+{"asctime": "2025-12-25T16:08:48", "msecs": 553.0, "levelname": "INFO", "correlation_id": "-", "name": "uvicorn.error", "lineno": 264, "message": "Shutting down"}
+{"asctime": "2025-12-25T16:08:48", "msecs": 654.0, "levelname": "INFO", "correlation_id": "-", "name": "uvicorn.error", "lineno": 67, "message": "Waiting for application shutdown."}
+{"asctime": "2025-12-25T16:08:48", "msecs": 656.0, "levelname": "INFO", "correlation_id": "-", "name": "uvicorn.error", "lineno": 76, "message": "Application shutdown complete."}
+{"asctime": "2025-12-25T16:08:48", "msecs": 657.0, "levelname": "INFO", "correlation_id": "-", "name": "uvicorn.error", "lineno": 94, "message": "Finished server process [16746]", "color_message": "Finished server process [\u001b[36m%d\u001b[0m]"}

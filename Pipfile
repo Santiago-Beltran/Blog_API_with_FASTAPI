@@ -12,8 +12,15 @@ httpx = "*"
 python-dotenv = "*"
 pydantic-settings = "*"
 databases = {extras = ["aiosqlite"], version = "*"}
+rich = "*"
+asgi-correlation-id = "*"
+python-json-logger = "*"
+python-jose = "*"
+python-multipart = "*"
+passlib = {extras = ["bcrypt"], version = "*"}
 
 [dev-packages]
+pytest-mock = "*"
 
 [requires]
 python_version = "3.11"
