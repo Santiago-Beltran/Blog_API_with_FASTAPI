@@ -6,10 +6,10 @@ from asgi_correlation_id import CorrelationIdMiddleware
 from fastapi import FastAPI, HTTPException
 from fastapi.exception_handlers import http_exception_handler
 
-from courseapi.database import database
-from courseapi.logging_conf import configure_logging
-from courseapi.routers.post import router as post_router
-from courseapi.routers.user import router as user_router
+from blogapi.database import database
+from blogapi.logging_conf import configure_logging
+from blogapi.routers.post import router as post_router
+from blogapi.routers.user import router as user_router
 
 logger = logging.getLogger(__name__)
 

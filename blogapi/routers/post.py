@@ -2,14 +2,14 @@ import logging
 
 from fastapi import APIRouter, HTTPException
 
-from courseapi.models.post import (
+from blogapi.models.post import (
     Comment,
     CommentIn,
     UserPost,
     UserPostIn,
     UserPostWithComments,
 )
-from courseapi.database import database, post_table, comment_table
+from blogapi.database import database, post_table, comment_table
 
 router = APIRouter()
 

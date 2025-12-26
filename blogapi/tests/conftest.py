@@ -7,8 +7,8 @@ from httpx import AsyncClient, ASGITransport
 
 os.environ["ENV_STATE"] = "test" 
 
-from courseapi.database import database, user_table #noqa: E402
-from courseapi.main import app #noqa: E402
+from blogapi.database import database, user_table #noqa: E402
+from blogapi.main import app #noqa: E402
 
 @pytest.fixture(scope="session")
 def anyio_backend():

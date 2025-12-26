@@ -2,7 +2,7 @@ import logging
 
 from passlib.context import CryptContext
 
-from courseapi.database import database, user_table
+from blogapi.database import database, user_table
 
 logger = logging.getLogger(__name__)
 

@@ -1,7 +1,7 @@
 import logging
 from logging.config import dictConfig
 
-from courseapi.config import DevConfig, config
+from blogapi.config import DevConfig, config
 
 def obfuscated(email: str, obfuscated_length: int) -> str:
     #santiago@tutanota.com -> #sa********@tutanota.com

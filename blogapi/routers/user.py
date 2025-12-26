@@ -1,8 +1,8 @@
 import logging
 from fastapi import APIRouter, HTTPException, status
-from courseapi.models.user import UserIn
-from courseapi.security import get_user, get_password_hash
-from courseapi.database import database, user_table
+from blogapi.models.user import UserIn
+from blogapi.security import get_user, get_password_hash
+from blogapi.database import database, user_table
 
 logger = logging.getLogger(__name__)
 

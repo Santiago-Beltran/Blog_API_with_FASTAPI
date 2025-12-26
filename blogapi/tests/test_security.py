@@ -1,5 +1,5 @@
 import pytest
-from courseapi import security
+from blogapi import security
 
 @pytest.mark.anyio
 async def test_password_hashes():

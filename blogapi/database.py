@@ -1,6 +1,6 @@
 import databases 
 import sqlalchemy
-from courseapi.config import config # Runs the config module and therefore reads ENV
+from blogapi.config import config # Runs the config module and therefore reads ENV
 
 metadata = sqlalchemy.MetaData()
 
