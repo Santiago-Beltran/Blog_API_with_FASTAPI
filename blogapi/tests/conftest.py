@@ -5,10 +5,11 @@ import pytest
 from fastapi.testclient import TestClient
 from httpx import AsyncClient, ASGITransport
 
-os.environ["ENV_STATE"] = "test" 
+os.environ["ENV_STATE"] = "test"
 
-from blogapi.database import database, user_table #noqa: E402
-from blogapi.main import app #noqa: E402
+from blogapi.database import database, user_table  # noqa: E402
+from blogapi.main import app  # noqa: E402
+
 
 @pytest.fixture(scope="session")
 def anyio_backend():
@@ -33,6 +34,7 @@ async def async_client(client) -> AsyncGenerator[AsyncClient, None]:
         transport=ASGITransport(app=app), base_url=client.base_url
     ) as ac:
         yield ac
+
 
 @pytest.fixture()
 async def registered_user(async_client: AsyncClient) -> dict:

@@ -6,8 +6,8 @@ class UserPostIn(BaseModel):
 
 
 class UserPost(UserPostIn):
-    model_config = ConfigDict(from_attributes=True) #ORM mode
-    
+    model_config = ConfigDict(from_attributes=True)  # ORM mode
+
     id: int
 
 
@@ -17,9 +17,10 @@ class CommentIn(BaseModel):
 
 
 class Comment(CommentIn):
-    model_config = ConfigDict(from_attributes=True) #ORM mode
+    model_config = ConfigDict(from_attributes=True)  # ORM mode
 
     id: int
+
 
 class UserPostWithComments(BaseModel):
     post: UserPost

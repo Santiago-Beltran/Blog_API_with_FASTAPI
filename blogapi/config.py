@@ -3,10 +3,12 @@ from typing import Optional
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+
 class BaseConfig(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     ENV_STATE: Optional[str] = None
+
 
 class GlobalConfig(BaseConfig):
     DATABASE_URL: Optional[str] = None
@@ -18,8 +20,10 @@ class GlobalConfig(BaseConfig):
 class DevConfig(GlobalConfig):
     model_config = SettingsConfigDict(env_prefix="DEV_")
 
+
 class ProdConfig(GlobalConfig):
     model_config = SettingsConfigDict(env_prefix="PROD_")
+
 
 class TestConfig(GlobalConfig):
     model_config = SettingsConfigDict(env_prefix="TEST_")
@@ -35,4 +39,3 @@ def get_config(env_state: str):
 
 
 config = get_config(BaseConfig().ENV_STATE)
-print("LAURITA ", config)

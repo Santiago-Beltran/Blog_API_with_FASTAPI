@@ -15,6 +15,7 @@ router = APIRouter()
 
 logger = logging.getLogger(__name__)
 
+
 async def find_post(post_id: int):
     logger.info(f"Finding post with id {post_id}")
 
@@ -33,7 +34,7 @@ async def create_post(post: UserPostIn):
     query = post_table.insert().values(data)
 
     logger.debug(query)
-    
+
     last_record_id = await database.execute(query)
     return {**data, "id": last_record_id}
 
@@ -46,7 +47,6 @@ async def get_all_posts():
     logger.debug(query)
 
     return await database.fetch_all(query)
-
 
 
 @router.post("/comment", response_model=Comment, status_code=201)
@@ -74,7 +74,7 @@ async def get_comments_on_post(post_id: int):
 
     if not post:
         raise HTTPException(status_code=404, detail="Post not found.")
-    
+
     query = comment_table.select().where(comment_table.c.post_id == post_id)
 
     return await database.fetch_all(query)
@@ -83,9 +83,9 @@ async def get_comments_on_post(post_id: int):
 @router.get("/post/{post_id}", response_model=UserPostWithComments, status_code=200)
 async def get_post_with_comments(post_id: int):
     logger.info(f"Getting post {post_id} and its comments")
-    
+
     post = await find_post(post_id)
-    
+
     if not post:
         raise HTTPException(status_code=404, detail="Post not found.")
 
