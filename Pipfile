@@ -9,7 +9,6 @@ ruff = "*"
 pytest = "*"
 httpx = "*"
 python-dotenv = "*"
-pydantic-settings = "*"
 databases = {extras = ["aiosqlite"], version = "*"}
 rich = "*"
 asgi-correlation-id = "*"
@@ -20,6 +19,8 @@ pipfile = "*"
 passlib = {extras = ["bcrypt"], version = "==1.7.4"}
 bcrypt = "==4.0.1"
 fastapi = "*"
+pydantic = "*"
+pydantic-settings = "*"
 
 [dev-packages]
 pytest-mock = "*"

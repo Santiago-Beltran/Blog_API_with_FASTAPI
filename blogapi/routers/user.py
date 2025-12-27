@@ -1,7 +1,7 @@
 import logging
 from fastapi import APIRouter, HTTPException, status
 from blogapi.models.user import UserIn
-from blogapi.security import get_user, get_password_hash
+from blogapi.security import get_user, get_password_hash, authenticate_user, create_access_token
 from blogapi.database import database, user_table
 
 logger = logging.getLogger(__name__)
@@ -26,3 +26,9 @@ async def register(user: UserIn):
     await database.execute(query)
 
     return {"detail": "User created."}
+
+@router.post("/token")
+async def login(user: UserIn):
+    user = await authenticate_user(user.email, user.password)
+    access_token = create_access_token(user.email)
+    return {"access_token": access_token, "token_type": "bearer"}
