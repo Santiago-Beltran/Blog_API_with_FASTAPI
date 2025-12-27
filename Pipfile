@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-fastapi = "*"
 uvicorn = "*"
 ruff = "*"
 pytest = "*"
@@ -17,10 +16,13 @@ asgi-correlation-id = "*"
 python-json-logger = "*"
 python-jose = "*"
 python-multipart = "*"
-passlib = {extras = ["bcrypt"], version = "*"}
+pipfile = "*"
+passlib = {extras = ["bcrypt"], version = "==1.7.4"}
+bcrypt = "==4.0.1"
+fastapi = "*"
 
 [dev-packages]
 pytest-mock = "*"
 
 [requires]
-python_version = "3.11"
+python_version = "3.12.6"

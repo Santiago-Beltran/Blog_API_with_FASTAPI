@@ -16,19 +16,19 @@ def anyio_backend():
 
 
 @pytest.fixture()
-def client() -> Generator[TestClient]:
+def client() -> Generator[TestClient, None, None]:
     yield TestClient(app)
 
 
 @pytest.fixture(autouse=True)
-async def db() -> AsyncGenerator[None]:
+async def db() -> AsyncGenerator[None, None]:
     await database.connect()
     yield
     await database.disconnect()
 
 
 @pytest.fixture()
-async def async_client(client) -> AsyncGenerator[AsyncClient]:
+async def async_client(client) -> AsyncGenerator[AsyncClient, None]:
     async with AsyncClient(
         transport=ASGITransport(app=app), base_url=client.base_url
     ) as ac:
